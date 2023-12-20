@@ -1,0 +1,149 @@
+.college-container{
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr 1fr;
+    gap: 2.5rem;
+    margin: 5rem 3.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+
+    .image{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 1px;
+          overflow: hidden;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          image-rendering: auto
+
+    }
+    .content{
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        h2{
+            font-size: 30px;
+            font-weight: 500;
+
+        }
+        .ratings{
+            justify-content: center;
+            align-items: center;
+            .stars{
+                align-self: center;
+                display: flex;
+                flex-direction: row;
+                font-size: 15px;
+                font-weight: 400;
+                color: grey;
+                gap: 0.5rem;
+            }
+        }
+    }
+    .stats{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 3.5rem;
+        border-left: 1px solid grey;
+         
+        span{
+            font-size: 1rem;
+            font-weight: 300;
+            color: grey;
+        }
+        h2{
+            font-weight: 500;;
+            padding-top: 10px;
+        }
+    }
+    &:hover{
+                transition: 400ms;
+                box-shadow: 5px 10px;
+                -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+                border-radius: 10px;
+                
+            }
+}
+
+/* ============ MEDIA QUERIES FOR MEDIUM DEVICES =========*/
+
+/* ============ MEDIA QUERIES FOR MEDIUM DEVICES =========*/
+
+@media screen and (max-width: 1200px) {
+    .college-container{
+        margin: 1rem 0.5rem;
+        grid-template-columns: 1.5fr 2fr 1.2fr;
+        font-size: 1rem;
+        .image{
+            height: 250px;
+            width: 300px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            align-self: center;
+            margin-left: 0.7rem;
+        }
+        .contnet{
+            h2{
+                font-size: 10px;
+            }
+            .details{
+                display: none;
+            }
+        }
+
+    }
+
+}
+@media screen and (max-width: 740px) {
+    .college-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0rem;
+        .image{
+            margin: 1rem auto;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            width: auto;
+            padding: 0.5rem;
+        }
+        .content{
+            position: relative;
+            padding: 0;
+            .ratings{
+                margin-top: 1rem;
+                font-size: 1rem;
+                padding-top: 10px;
+            }
+
+            .details{
+                font-size: 1rem;
+                margin: 0;
+                padding: 0.3rem;
+            }
+
+            .stars{
+                position: absolute;
+                top: 52%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+            }
+            
+
+        }
+        .stats{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                border-left: none; 
+                margin: 1rem auto;
+                overflow: hidden;
+
+            }
+    }
+}
+
