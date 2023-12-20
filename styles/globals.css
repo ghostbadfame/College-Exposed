@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+
+
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  transition: all 400ms ease;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.custom-img {
+  background-image: url('../public/illustration-university-graduates_53876-18434.jpeg');
+  
+}
+
+.custom-imgbg {
+  background-image: url('/assets/images/droneCollege.jpeg')
+}
+
+.custom-img2 {
+  background-image: url('/assets/images/droneCollege.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.custom-img2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* You can adjust the opacity by changing the last value of the rgba */
+  z-index: 1;
+}
+
+.custom-img2 .content {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-img9{
+  background-image: url('/assets/images/hackbg.jpg');
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-img9::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* You can adjust the opacity by changing the last value of the rgba */
+  z-index: 1;
+}
+
+.custom-img9 .content {
+  position: relative;
+  z-index: 2;
+}
+
+
+body{
+  word-spacing: 2px;
+}
+
+.wrapper{
+  display:grid;
+  height:100vh;
+  place-items:center
+}
+
+
+/*  css for the gradient background  */
+gradient {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  left: 37%;
+  bottom: 0;
+
+  background: #65c4fa;
+  filter: blur(150px);
+}
+
+
+.dark1{
+  background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+
+.dark2{
+  background: radial-gradient(circle at 10% 20%, rgba(216, 241, 230, 0.46) 0.1%, rgba(233, 226, 226, 0.28) 90.1%);
+}
+
+
+
+
+
+
+
+/*  for the video styling  */
+
+:root {
+  --video-width: 100vw;
+  --video-height: 100vh;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  :root {
+      --video-height: 56.25vw;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  :root {
+      --video-width: 177.78vh;
+  }
+}
+
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--video-width);
+  height: var(--video-height);
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+
+.newfont{
+  font-family: 'Manrope', sans-serif;
+}
